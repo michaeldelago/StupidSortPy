@@ -25,10 +25,10 @@ def genList(n):
         ls.append(random.randint(0,100))
     return ls
 
-if len(sys.argv) >= 1:
+if len(sys.argv) > 1:
     n = int(sys.argv[1])
 else:
-    n = input("How long should the list be? ")
+    n = int(input("How long should the list be? "))
 
 ls = genList(n)
 print("===OLD LIST===\n",ls)
