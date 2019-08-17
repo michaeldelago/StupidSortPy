@@ -5,11 +5,16 @@ import sys
 
 
 def isSorted(arr):
-    for i in range(len(arr)-1):
-        if arr[i] > arr[i+1]:
-            return False
-        else:
-            pass        
+    length = len(arr)
+    for i, number in enumerate(arr):
+        try:
+            if number > arr[i+1]:
+                return False
+            else:
+                pass       
+        except:
+            if i == length - 1:
+                return True
     return True
 
 def StupidSort(arr): #Shuffles list until it's sorted
